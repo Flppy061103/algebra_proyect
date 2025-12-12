@@ -1,0 +1,33 @@
+1. Estructura general del programa
+
+El programa visualiza caminos en un grafo usando su matriz de adyacencia. La matriz C define las conexiones entre nodos. Se implementan funciones para multiplicar matrices y calcular potencias, lo que permite obtener C^n, que indica cuántos caminos de longitud n existen entre nodos.
+
+2. Funciones principales
+
+multiplicar_matrices(A,B): realiza la multiplicación clásica de matrices 3×3.
+
+potencia_matriz(A,n): calcula A^n multiplicando la matriz por sí misma n veces.
+
+vecinos(n): devuelve los nodos conectados al nodo n.
+
+generar_caminos(o,n): construye todos los caminos posibles de longitud n desde un nodo origen.
+
+3. Visualización
+
+Se dibuja un grafo con nodos y aristas. El programa resalta nodos y aristas para mostrar el recorrido de cada camino. También muestra la matriz C y la matriz C^n.
+
+4. Interacción
+
+El usuario introduce un nodo origen y un valor n. El programa calcula C^n, genera los caminos y permite mostrarlos automáticamente o paso a paso.
+
+5. Relación con álgebra lineal
+
+La matriz de adyacencia C representa un endomorfismo sobre un espacio vectorial de dimensión 3. La potencia C^n describe la evolución del sistema tras aplicar el endomorfismo n veces. Cada entrada de C^n indica cuántas trayectorias de longitud n existen entre dos nodos.
+
+6. Diagonalización del endomorfismo
+
+Si C es diagonalizable, existe una base donde el endomorfismo se representa como una matriz diagonal D. Entonces C = P D P^{-1} y C^n = P D^n P^{-1}. Esto simplifica el cálculo de potencias, pues D^n se obtiene elevando cada valor propio a la potencia n. En redes de microdispositivos, esta diagonalización permite analizar propagación, estabilidad y comportamiento repetitivo de señales o estados.
+
+7. Aplicación en redes de microdispositivos
+
+El grafo modela conexiones entre microdispositivos. El endomorfismo describe cómo se transmite información entre ellos. Las potencias de la matriz permiten estudiar rutas posibles, redundancia, alcance y dinámica del sistema. La diagonalización facilita predecir el comportamiento a largo plazo del flujo de información.
