@@ -144,6 +144,12 @@ class VisualizadorCaminos:
         except:
             self.explicar("Por favor escribe un nodo válido y un número entero.")
             return False
+        if o<0 or o>=3:
+            self.explicar("El nodo origen debe estar entre 0 y 2.")
+            return False
+        if n<0:
+            self.explicar("El valor de n no puede ser negativo.")
+            return False
         Cn=potencia_matriz(matriz_C,n)
         self.mostrar_matriz(self.tabla_Cn,Cn)
         self.caminos=self.generar_caminos(o,n)
@@ -196,4 +202,3 @@ class VisualizadorCaminos:
         self.ventana.mainloop()
 
 VisualizadorCaminos().ejecutar()
-@Floppy
